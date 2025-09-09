@@ -1,7 +1,7 @@
 const ReUsableCard = ({ item, key }) => {
   return (
-    <div key={key} className="w-80 lg:w-60 px-2">
-      <div className="w-full h-90 lg:h-70">
+    <div key={key} className="w-50 lg:w-60 px-2">
+      <div className="w-full h-60 lg:h-70">
         <img
           className="w-full h-full object-cover"
           src={item.image}
@@ -9,7 +9,7 @@ const ReUsableCard = ({ item, key }) => {
         />
       </div>
       <div className="w-full">
-        <p>{item.name}</p>
+        <p className="text-sm">{item.name}</p>
         <div className="flex items-center gap-x-5">
           <p className="text-sm font-semibold text-black">${item.new_price}</p>
           <p className="line-through text-sm font-semibold text-gray-500">

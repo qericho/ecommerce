@@ -1,10 +1,9 @@
 import Logo from "../assets/logo.png";
 import Cart from "../assets/cart_icon.png";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("shop");
+  const location = useLocation();
 
   const menuItems = [
     { name: "Shop", path: "/", key: "shop" },
@@ -13,14 +12,14 @@ const Navbar = () => {
     { name: "Kids", path: "/kids", key: "kids" },
   ];
 
+  const activeKey =
+    menuItems.find((item) => item.path === location.pathname)?.key || "";
+
   return (
     <header className="w-full flex items-center justify-between px-5 md:px-20 py-8 border-b border-gray-100 relative">
       {/* Logo */}
       <Link to={"/"}>
-        <div
-          onClick={() => setMenu("shop")}
-          className="flex items-center gap-x-2"
-        >
+        <div className="flex items-center gap-x-2">
           <div className="w-10">
             <img
               className="w-full h-full object-cover"
@@ -33,16 +32,12 @@ const Navbar = () => {
       </Link>
 
       {/* Menu */}
-      <ul className="lg:flex hidden flex items-center gap-x-10 text-sm text-gray-500 font-semibold">
+      <ul className="lg:flex hidden items-center gap-x-10 text-sm text-gray-500 font-semibold">
         {menuItems.map((item) => (
           <li key={item.key}>
-            <Link
-              to={item.path}
-              className="cursor-pointer"
-              onClick={() => setMenu(item.key)}
-            >
+            <Link to={item.path} className="cursor-pointer">
               {item.name}
-              {menu === item.key && (
+              {activeKey === item.key && (
                 <hr className="h-[2px] bg-red-600 border-none rounded-full mt-2" />
               )}
             </Link>
@@ -50,7 +45,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* Right side Login/Cart */}
+      {/* Right side */}
       <div className="flex items-center gap-5 md:gap-x-8 text-gray-500">
         <Link to={"/login"}>
           <button className="hidden lg:flex text-sm font-semibold px-5 py-1 rounded-full border border-gray-400 cursor-pointer">
@@ -58,7 +53,7 @@ const Navbar = () => {
           </button>
         </Link>
         <Link to={"/cart"}>
-          <div onClick={() => setMenu("")} className="w-6 relative">
+          <div className="w-6 relative">
             <img
               className="w-full h-full object-cover"
               src={Cart}

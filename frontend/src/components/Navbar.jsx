@@ -53,7 +53,7 @@ const Navbar = () => {
       {/* Right side Login/Cart */}
       <div className="flex items-center gap-5 md:gap-x-8 text-gray-500">
         <Link to={"/login"}>
-          <button className="hidden lg:flextext-sm font-semibold px-5 py-1 rounded-full border border-gray-400 cursor-pointer">
+          <button className="hidden lg:flex text-sm font-semibold px-5 py-1 rounded-full border border-gray-400 cursor-pointer">
             Login
           </button>
         </Link>

@@ -3,7 +3,7 @@ import Hand_Icon from "../assets/hand_icon.png";
 import Arrow from "../assets/arrow.png";
 const Hero = () => {
   return (
-    <div className="w-full h-screen bg-gradient-to-b from-pink-100 to-white">
+    <div className="w-full h-screen bg-gradient-to-b from-pink-100 to-white relative">
       <div className="h-full w-full flex items-center justify-between px-10 lg:px-40">
         {/* Right */}
         <div className="w-full">
@@ -18,7 +18,7 @@ const Hero = () => {
           </h1>
           <button
             className="bg-[#c23231] text-white px-10 py-2 rounded-full 
-           hover:scale-105 transition-all cursor-pointer"
+           hover:scale-105 transition-all cursor-pointer duration-150"
           >
             <div className="flex items-center justify-center gap-x-3">
               <span className="text-sm font-medium">Latest Collection</span>

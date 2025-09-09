@@ -1,4 +1,4 @@
-const PopularCard = ({ item, key }) => {
+const ReUsableCard = ({ item, key }) => {
   return (
     <div key={key} className="w-80 lg:w-60 px-2">
       <div className="w-full h-90 lg:h-70">
@@ -21,4 +21,4 @@ const PopularCard = ({ item, key }) => {
   );
 };
 
-export default PopularCard;
+export default ReUsableCard;

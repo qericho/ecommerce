@@ -4,6 +4,7 @@ import Shop from "./pages/Shop";
 import ShopCategory from "./pages/ShopCategory";
 import LoginSignUp from "./pages/LoginSignUp";
 import Cart from "./pages/Cart";
+import Footer from "./components/Footer";
 const App = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="login" element={<LoginSignUp />} />
           <Route path="cart" element={<Cart />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );

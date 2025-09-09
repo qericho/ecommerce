@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full flex items-center justify-between px-5 md:px-20 py-8 border-b border-gray-100">
+    <header className="w-full flex items-center justify-between px-5 md:px-20 py-8 border-b border-gray-100 relative">
       {/* Logo */}
       <Link to={"/"}>
         <div
@@ -51,14 +51,14 @@ const Navbar = () => {
       </ul>
 
       {/* Right side Login/Cart */}
-      <div className="flex items-center gap-3 md:gap-x-8 text-gray-500">
+      <div className="flex items-center gap-5 md:gap-x-8 text-gray-500">
         <Link to={"/login"}>
-          <button className="text-sm font-semibold px-5 py-1 rounded-full border border-gray-400 cursor-pointer">
+          <button className="hidden lg:flextext-sm font-semibold px-5 py-1 rounded-full border border-gray-400 cursor-pointer">
             Login
           </button>
         </Link>
         <Link to={"/cart"}>
-          <div onClick={() => setMenu("")} className="w-7 relative">
+          <div onClick={() => setMenu("")} className="w-6 relative">
             <img
               className="w-full h-full object-cover"
               src={Cart}
@@ -69,6 +69,24 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
+        <span className="cursor-pointer lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu-icon lucide-menu"
+          >
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+          </svg>
+        </span>
       </div>
     </header>
   );

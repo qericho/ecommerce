@@ -10,7 +10,7 @@ const NewCollection = () => {
       {/* New Collection Container */}
       <div
         className="w-full h-full xl:w-250 mx-auto grid place-items-center
-        grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-32"
+        grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0 mb-32"
       >
         {new_collections.map((p) => {
           return <ReUsableCard item={p} key={p.id} />;

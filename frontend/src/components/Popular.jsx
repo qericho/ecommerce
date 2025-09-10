@@ -9,7 +9,7 @@ const Popular = () => {
       </div>
       <div
         className="w-full h-full xl:w-280 mx-auto
-      grid place-items-center grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      grid place-items-center grid-cols-2 md:grid-cols-3 lg:grid-cols-4 "
       >
         {data_product.map((p) => {
           return <ReUsableCard item={p} key={p.id} />;

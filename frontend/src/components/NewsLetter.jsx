@@ -7,13 +7,13 @@ const NewsLetter = () => {
       <p className="text-center my-5 font-semibold">
         Subscribe to our newsletter and stay updated
       </p>
-      <div className="max-w-100 md:max-w-150 mx-auto border flex rounded-full overflow-hidden">
+      <div className="max-w-80 md:max-w-150 mx-auto border flex rounded-full overflow-hidden">
         <input
           type="text"
           placeholder="Enter your email"
-          className="w-full px-4 py-2 md:py-3 outline-none"
+          className="w-full px-4 py-2 md:py-3 outline-none text-sm"
         />
-        <button className="bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:bg-black/90 cursor-pointer transition-colors duration-150">
+        <button className="bg-black text-white text-sm font-bold px-6 py-1 md:py-3 rounded-full hover:bg-black/90 cursor-pointer transition-colors duration-150">
           Subscribe
         </button>
       </div>

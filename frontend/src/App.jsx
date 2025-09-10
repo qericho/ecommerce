@@ -8,11 +8,14 @@ import Footer from "./components/Footer";
 import Mens_Banner from "./assets/banner_mens.png";
 import Womens_Banner from "./assets/banner_women.png";
 import Kids_Banner from "./assets/banner_kids.png";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 const App = () => {
   return (
     <>
       <Router>
         <Navbar />
+        <ScrollToTop />
+
         <Routes>
           <Route path="/" element={<Shop />} />
           <Route
@@ -25,7 +28,7 @@ const App = () => {
           />
           <Route
             path="kids"
-            element={<ShopCategory banner={Kids_Banner} category={"kid"} />}
+            element={<ShopCategory banner={Kids_Banner} category={"kids"} />}
           />
           <Route path="login" element={<LoginSignUp />} />
           <Route path="cart" element={<Cart />} />

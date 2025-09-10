@@ -1,6 +1,6 @@
 const ReUsableCard = ({ item, key }) => {
   return (
-    <div key={key} className="w-50 lg:w-60 px-2">
+    <div key={key} className="w-50 h-full lg:w-60 px-2">
       <div className="w-full h-60 lg:h-70">
         <img
           className="w-full h-full object-cover"
